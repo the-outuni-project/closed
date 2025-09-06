@@ -1,5 +1,5 @@
 {
-  "name": "gh-static-site",
+  "name": "top-is-closed",
   "private": true,
   "version": "0.0.2",
   "scripts": {
@@ -13,6 +13,7 @@
     "html-bundler-webpack-plugin": "^4.20.2",
     "http-server": "^14.1.1",
     "mini-css-extract-plugin": "^2.9.2",
+    "nunjucks": "^3.2.4",
     "sass": "^1.89.0",
     "sass-loader": "^16.0.5",
     "webpack": "^5.99.8",
