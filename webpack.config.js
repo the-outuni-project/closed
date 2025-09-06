@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const entry = {
-  core: [ './assets/index.js', './assets/index.scss'],
+  core: ['./assets/index.js', './assets/index.scss', './assets/favicon.ico'],
 };
 
 // Dynamically load all .njk files from the pages directory
@@ -19,7 +19,7 @@ const entry = {
 const pageEntries = () => {
   const entries = {};
   const pagesDir = path.join(__dirname, 'pages');
-  const files =  fs.readdirSync(pagesDir);
+  const files = fs.readdirSync(pagesDir);
 
   files.forEach(file => {
     if (file.endsWith('.njk')) {
@@ -60,12 +60,17 @@ const moduleConfig = {
       include: resolve(__dirname, 'assets'),
       use: [
         MiniCssExtractPlugin.loader,
-        'css-loader',
+        {
+          loader: 'css-loader', options: {
+            url: true
+          }
+        },
+        // 'css-loader',
         'sass-loader'
       ]
     },
     {
-      test: /\.(png|jpe?g|gif|svg)$/i,
+      test: /\.(png|jpe?g|gif|svg|ico)$/i,
       type: 'asset/resource',
       generator: {
         filename: 'images/[name][ext][query]'
@@ -87,6 +92,7 @@ export default {
   plugins,
   output: {
     path: resolve(__dirname, 'wwwroot'),
+    publicPath: '/', //test
     filename: 'dist/[name].js',
     clean: true
   },

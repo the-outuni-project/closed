@@ -1,3 +1,53 @@
-body {
-  background: white;
+html {
+  background: linear-gradient(0deg, rgba(20, 17, 19, 0.9),
+      rgba(20, 17, 19, 0.9)),
+    url(/assets/bg.jpg) no-repeat center center fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  color: white;
+  text-align: center;
+  font-family: 'Gabarito', sans-serif;
+}
+
+
+img {
+  filter: invert(1);
+  display: block;
+  margin: 5vh auto 0;
+  max-height: 150px;
+}
+
+p,
+h1 {
+  text-align: center;
+}
+
+h1::selection,
+p::selection,
+img::selection {
+  background: unset;
+}
+
+.srp-update {
+  max-width: 450px;
+  margin: 60px auto 0px;
+}
+
+.srp-update hr {
+  border: none;
+  height: 1px;
+  background-color: #333;
+  margin: 45px 0px;
+}
+
+.srp-update>ul {
+  list-style: none;
+}
+
+.srp-update>ul li {
+  margin-bottom: 5px;
 }
