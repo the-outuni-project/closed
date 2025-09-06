@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Metadata -->
+  <meta name="author" content="Samuel Grant" />
+  <meta name="description" content="{{ description }}" />
+  <meta name="keywords" content="" />
+  <meta name="theme-color" content="" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:height" content="" />
+  <meta property="og:image:width" content="" />
+  <meta property="og:image:alt" content="" />
+
+  <!-- Assets -->
+  <link rel="stylesheet" href="/dist/index.css" />
+  <link rel="icon" type="" href="/dist/favicon.ico" />
+  <script src="/dist/index.js" defer></script>
+</head>
+
+<body>
+  {% block body %}
+  {% endblock %}
+</body>
+
+</html>

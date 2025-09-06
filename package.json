@@ -1,0 +1,21 @@
+{
+  "name": "gh-static-site",
+  "private": true,
+  "version": "0.0.2",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "npx http-server -a localhost -p 3030 wwwroot"
+  },
+  "devDependencies": {
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-bundler-webpack-plugin": "^4.20.2",
+    "http-server": "^14.1.1",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.89.0",
+    "sass-loader": "^16.0.5",
+    "webpack": "^5.99.8",
+    "webpack-cli": "^6.0.1"
+  }
+}
